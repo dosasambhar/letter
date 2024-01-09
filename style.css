@@ -1,0 +1,167 @@
+body {
+    margin: 0;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('https://www.shutterstock.com/image-illustration/valentines-day-background-hearts-260nw-1159868974.jpg');
+    background-size: cover;
+}
+
+#envelope {
+    position: absolute;
+    top: calc(50vh - 200px);
+    left: calc(50vw - 150px);
+    width: 300px;
+    height: 300px;
+}
+
+#envelope > * {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+#back {
+    display: block;
+    z-index: 0;
+}
+
+#front {
+    display: block;
+    z-index: 10;
+}
+
+#top {
+    display: block;
+    z-index: 11;
+}
+
+#top.animate,
+#front.animate,
+#back.animate,
+#envelope button.animate {
+    opacity: 0;
+    transition: opacity 1s;
+    transition-delay: 1s;
+}
+
+#letter {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(245, 229, 231, 0.9); /* Light pink background */
+    padding: 5px;
+    z-index: 5;
+    left: 15px;
+    right: 15px;
+    bottom: 5px;
+    top: 115px;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1),
+      0px 1px 2px 0px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+    font-size: 14px;
+}
+
+h1 {
+    padding-top: 12px;
+    color: #ff048a; /* Deep pink color for h1 */
+}
+
+h1 span {
+    color: red;
+}
+
+p {
+    font-size: 17px;
+    padding: 2px;
+    line-height: 20px;
+    color: #fe058a; /* Deep pink color for paragraphs */
+}
+
+#letter img {
+    background-size: cover;
+}
+
+#letter.animate {
+    animation: makebig 2s forwards;
+    animation-delay: 1s;
+}
+
+@keyframes makebig {
+    0% {
+        top: 105px;
+        left: 15px;
+        right: 15px;
+        bottom: 5px;
+        font-size: 16px;
+    }
+    33% {
+        top: -100px;
+        left: 15px;
+        right: 15px;
+        bottom: 150px;
+        font-size: 16px;
+    }
+    100% {
+        top: -0px;
+        left: -55px;
+        right: -25px;
+        bottom: -100px;
+        font-size: 24px;
+    }
+}
+
+#letter h1 {
+    font-size: inherit;
+    color: #ff1493; /* Deep pink color for h1 */
+}
+
+#letter h2 {
+    font-size: inherit;
+    color: #ff1493; /* Deep pink color for h2 */
+}
+
+#letter img {
+    height: 50%;
+}
+
+a {
+    color: #ff1493; /* Deep pink color for links */
+}
+
+#envelope button {
+    display: block;
+    z-index: 15;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color: #ff1493; /* Deep pink color for button background */
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    top: calc(200px - 25px);
+    left: calc(150px - 25px);
+    transition: transform 1s, background-color 1s, color 1s;
+}
+
+#envelope button:hover {
+    background-color: white;
+    transform: scale(1.5);
+    color: #ff1493; /* Deep pink color on hover */
+    transition: transform 1s, background-color 1s, color 1s;
+}
+
+.text h1 {
+    color: #ff1493; /* Deep pink color for text heading */
+    text-align: center;
+}
+
+.foottext{
+    margin-top:30rem;
+    text-align: center;
+    font-size: larger;
+}
